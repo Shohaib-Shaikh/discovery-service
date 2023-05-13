@@ -5,10 +5,10 @@ FROM openjdk:11
 LABEL maintainer="shohaibxshaikh@gmail.com"
 
 RUN mkdir -p /opt/project
-ADD target/discovery-service.jar /opt/vocare
+ADD target/discovery-service.jar /opt/project
 WORKDIR /opt/project
 
-# Make port 8081 available to the world outside this container
+# Make port 8761 available to the world outside this container
 EXPOSE 8761
 
 ENTRYPOINT java -jar discovery-service.jar
